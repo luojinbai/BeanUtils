@@ -9,8 +9,8 @@ import lombok.Data;
 @BeanCopySource(source = FromBean.class)
 public class ToBean {
 
-    @CopyProperty(convertor = Enum2IntConvertor.class, ignored = true)
+    @CopyProperty
     private int a;
-    @CopyProperty(convertor = Int2EnumConvertor.class)
+    @CopyProperty
     private MyEnum b;
 }
