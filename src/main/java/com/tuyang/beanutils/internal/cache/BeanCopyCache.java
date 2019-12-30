@@ -492,8 +492,8 @@ public class BeanCopyCache {
                         item.useBeanCopy = true;
 
                         itemList.add(item);
-                    } else if (methodTargetType.equals(Integer.class) && methodSourceType.isEnum()) {
-                        // int 转 enum， 通过 enum.getValue转
+                    } else if ((methodTargetType.equals(Integer.class) || methodTargetType.equals(int.class)) && methodSourceType.isEnum()) {
+                        // enum 转 int， 通过 enum.getValue转
                         BeanCopyPropertyItem item = new BeanCopyPropertyItem();
 
                         item.propertyName = propertyName;

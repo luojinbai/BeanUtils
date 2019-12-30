@@ -10,6 +10,10 @@ public class Test08 {
         FromBean fromBean = new FromBean();
         fromBean.setA(MyEnum.One);
         fromBean.setB(2);
+        fromBean.setC(MyEnum.Three.toString());
+        fromBean.setD("d");
+        fromBean.setE(10);
+        fromBean.setF(1000);
         return fromBean;
     }
 
@@ -19,6 +23,9 @@ public class Test08 {
         System.out.println(fromBean);
         ToBean toBean = BeanCopyUtils.copyBean(fromBean, ToBean.class);
         System.out.println(toBean);
+
+//        System.out.println(BeanCopyUtils.copyBean(toBean, FromBean.class));
+
 
     }
 }
